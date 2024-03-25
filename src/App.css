@@ -1,0 +1,209 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(0, 0, 0);
+}
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Optional: Align items vertically in the center */
+  
+  height: 72px;
+}
+
+/* App.css */
+.logo img {
+  height: 28px; /* Adjust the height to your desired size */
+  width: auto; /* Maintain aspect ratio */
+}
+
+
+nav ul{
+  font-size: 18px;
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+/*Hover effect for nav bar */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #333;
+  position: relative; /* Make the anchor tag a positioned parent */
+}
+
+ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Height of the background */
+  background-color: transparent; /* Initially transparent */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  border-radius: 5px; /* Rounded corners */
+}
+
+ul li a:hover::after {
+  background-color: #ff6600; /* Background color on hover */
+}
+
+/* search bar*/
+nav input[type="text"] {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+  font-size: 16px;
+  background-color: #f4f4f4;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+nav input[type="text"]:focus {
+  outline: none;
+  border-color: #ff6600;
+  box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+}
+
+/* RESPONSIVENESS FOR NAV*/
+/* For small screens */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 20px; /* Add padding to the container for better mobile layout */
+  }
+
+  nav {
+    flex-direction: column; /* Stack items vertically on small screens */
+    height: auto; /* Auto height */
+  }
+
+  .logo img {
+    margin-bottom: 10px; /* Add some spacing between the logo and the navigation links */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack navigation links vertically */
+    gap: 10px; /* Add some spacing between navigation links */
+  }
+
+  nav ul li {
+    margin-right: 0; /* Remove right margin for list items */
+  }
+
+  nav input[type="text"] {
+    width: 100%; /* Make the search bar full width */
+    margin-top: 10px; /* Add some spacing between the navigation links and the search bar */
+  }
+}
+
+/* Add more styles for aesthetic enhancements below */
+
+
+
+/* Mid CSS*/
+#title1{
+  color: #f4f4f4;
+  font-size: 50px;
+}
+#content1 {
+  color: #f4f4f4;
+}
+
+.mid {
+  margin-top: 5%;
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.mid-content {
+  flex: 1; /* Make the content div flexible */
+  max-width: 70%; /* Limit the maximum width to 50% of the container */
+  padding: 0 20px; /* Add padding for spacing */
+  margin-bottom: 170px;
+}
+
+.mid-image {
+  flex: 1; /* Make the image div flexible */
+  max-width: 60%; /* Limit the maximum width to 50% of the container */
+  
+}
+
+.mid-image img {
+  width: 100%; /* Ensure the image fills its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* .......CSS for Button....... */
+
+.explore-btn {
+  padding: 10px;
+  border: 2px solid #666666; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  background-color: transparent; /* Transparent background */
+  color: #666666; /* Text color */
+  font-size: 16px; /* Font size */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transition effect */
+  margin-right: 20px;
+}
+
+.explore-btn:hover {
+  background-color: #ffffff;; 
+  background-position: right center; /* Change background position on hover */
+  color: #0f0f0f; /* Text color on hover */
+  border-color: #ffffff; /* Border color on hover */
+}
+
+.start-btn {
+  padding: 10px;
+  border: 2px solid #333; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #fff; /* White background */
+  color: #000; /* Black text color */
+  font-size: 16px; /* Font size */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transition effect */
+}
+
+.start-btn:hover {
+  background-image: linear-gradient(to right, #ff3e13, #ff3f3f);
+  color: #fff; /* Text color on hover */
+  border-color: #ff3f3f; /* Border color on hover */
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .mid {
+    flex-direction: column-reverse; /* Stack items vertically and reverse order on smaller screens */
+  }
+
+  .mid-content,
+  .mid-image {
+    max-width: 100%; /* Adjust maximum width for smaller screens */
+    margin-bottom: 30px; /* Adjust margin for smaller screens */
+  }
+
+  .explore-btn,
+  .start-btn {
+    width: 100%; /* Make buttons full width */
+    margin-bottom: 15px; /* Add margin between buttons on smaller screens */
+  }
+}
