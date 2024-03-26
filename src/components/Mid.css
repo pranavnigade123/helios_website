@@ -1,32 +1,52 @@
 /* Mid.css */
 
 @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
   }
-  
-  @keyframes fadeInRight {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  .fade-in-left {
-    animation: slideInLeft 1s ease-in-out forwards;
+}
+
+/* Apply hover effect for both .mid-content and .mid-image on smaller screens */
+@media (max-width: 768px) {
+  .mid-content,
+  .mid-image {
+    transition: transform 0.5s ease; /* Add transition effect for transform property */
   }
-  
-  .fade-in-right {
-    animation: fadeInRight 1s ease-in-out forwards;
+
+  .mid-content:hover,
+  .mid-image:hover {
+    transform: translateY(-10px); /* Adjust the distance for hover effect */
   }
-  
+}
+
+/* Apply slide-in animation only for .mid-content on bigger screens */
+@media (min-width: 769px) {
+  .mid-content {
+    animation: slideInLeft 1s ease forwards;
+  }
+}
+
+/* Other animations remain the same */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-left {
+  animation: slideInLeft 1s ease-in-out forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s ease-in-out forwards;
+}
