@@ -23,7 +23,7 @@ const Mid = () => {
         <h1 id="title1">HELIOS: Powering the Crypto Cosmos</h1>
         <p id="content1">HELIOS fuels an expansive ecosystem, empowering developers to scale apps across blockchains.
           As our foundation, HELIOS ensures security and scalability, fostering a robust platform.</p>
-
+        <br></br>
         <div className="mid-btn">
           <button className="explore-btn">Explore Data</button>
           <button className="start-btn">Get Started</button>

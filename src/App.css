@@ -95,6 +95,7 @@ nav input[type="text"]:focus {
 
   .logo img {
     margin-bottom: 10px;
+    margin-top: 24px;
   }
 
   nav ul {
@@ -107,8 +108,10 @@ nav input[type="text"]:focus {
   }
 
   nav input[type="text"] {
-    width: 100%;
+    width: 80%;
     margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   /* CSS for hamburger menu icon */
@@ -118,6 +121,8 @@ nav input[type="text"]:focus {
     height: 30px;
     cursor: pointer;
     position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   .hamburger-menu .line {
@@ -213,7 +218,7 @@ nav input[type="text"]:focus {
   height: auto; /* Maintain aspect ratio */
 }
 
-/* .......CSS for Button....... */
+/* ................CSS for Button.................. */
 
 .explore-btn {
   padding: 10px;
@@ -267,5 +272,106 @@ nav input[type="text"]:focus {
   .start-btn {
     width: 100%; /* Make buttons full width */
     margin-bottom: 15px; /* Add margin between buttons on smaller screens */
+  }
+}
+
+/* ............Styles for OurVision component ...............*/
+
+/* Styles for OurVision component */
+
+.our-vision-container {
+  max-width: 800px; /* Adjust max-width */
+  margin: 0 auto; /* Center the container */
+  text-align: center;
+  margin-top: 80px; /* Adjust margin-top */
+  margin-bottom: 80px;
+  opacity: 0;
+}
+
+.our-vision-container.animate-slide-up {
+  animation: slide-up 1s forwards;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.our-vision-title {
+  font-size: 3rem; /* Increase font size for smaller screens */
+  color: #ffffff; /* Adjust color to ensure visibility */
+  background: linear-gradient(to right, #ff3a33, #ff7b00); /* Red to Orange gradient */
+  -webkit-background-clip: text; /* Clip the text to the background's gradient */
+  -webkit-text-fill-color: transparent; /* Hide the text color */
+  background-clip: text; /* Standard property for compatibility */
+}
+
+.our-vision-text {
+  font-size: 1rem; /* Adjust font size for smaller screens */
+  color: #ffffff; /* Adjust text color to ensure visibility */
+}
+
+@media screen and (max-width: 768px) {
+  .our-vision-container {
+    margin-top: 40px; /* Adjust margin-top for smaller screens */
+  }
+
+  .our-vision-text {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+  }
+}
+
+/* .........Styles for FeatureCards component .......................*/
+/* Add margin to the FeatureCards component */
+/* Styles for FeatureCards component */
+
+/* Container for feature cards */
+.feature-cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px; /* Adjust the gap between cards */
+  margin-bottom: 80px;
+  opacity: 0; /* Initially hide the cards */
+  transition: opacity 1.5s ease; /* Add transition for fade-in effect */
+}
+
+/* Individual feature card */
+.feature-card {
+  flex: 1; /* Equal width for all cards */
+  background-color: #f8f8f8; /* Example background color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Example box shadow */
+}
+
+/* Image inside the feature card */
+.feature-image {
+  max-width: 100%; /* Ensure the image doesn't exceed the width of the card */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Example border radius */
+}
+
+/* Apply fade-in animation to visible cards */
+.feature-cards-container.visible {
+  opacity: 1;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  /* Adjust container styles for smaller screens */
+  .feature-cards-container {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center; /* Align cards in the center */
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }

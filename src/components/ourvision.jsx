@@ -16,6 +16,7 @@ const OurVision = () => {
   }, []);
 
   return (
+    
     <div ref={visionRef} className="our-vision-container">
       <h1 className="our-vision-title">Our Vision</h1>
       <p className="our-vision-text">Unios merges blockchain and AI for groundbreaking innovation. Leading the charge in AGI development, we open doors to limitless potential. Join us in crafting a decentralized, intelligent future.</p>
