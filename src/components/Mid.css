@@ -24,29 +24,3 @@
   }
 }
 
-/* Apply slide-in animation only for .mid-content on bigger screens */
-@media (min-width: 769px) {
-  .mid-content {
-    animation: slideInLeft 1s ease forwards;
-  }
-}
-
-/* Other animations remain the same */
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.fade-in-left {
-  animation: slideInLeft 1s ease-in-out forwards;
-}
-
-.fade-in-right {
-  animation: fadeInRight 1s ease-in-out forwards;
-}

@@ -12,7 +12,7 @@ const FeatureCards = () => {
           entry.target.classList.remove('visible');
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
 
     observer.observe(cardsRef.current);
 
