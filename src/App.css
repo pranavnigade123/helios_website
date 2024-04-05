@@ -467,13 +467,15 @@ margin-bottom: 110px;
 }
 @media (max-width: 768px) {
   .ani-stats-title {
+    padding-left: 20px;
+    padding-right: 20px;
     margin-top: 100px;
     margin-bottom: 20px;
     font-size: 36px;
   }
   
   .ani-stats-title h1 {
-    font-size: 60px;
+    font-size: 54px;
   }
 
   .number-with-k {
