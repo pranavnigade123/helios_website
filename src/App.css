@@ -6,7 +6,7 @@ body {
   background-color: rgb(0, 0, 0);
 }
 .whitebg{
-background-color: #131313;
+background-color: #000000;
 }
 
 .container {
@@ -419,6 +419,7 @@ nav input[type="text"]:focus {
   background-image: linear-gradient(135deg, #61ffbb, #67b2ff);
   -webkit-background-clip: text; /* Clip text to background */
   -webkit-text-fill-color: transparent; /* Set text color to transparent */
+  
 }
 
 
@@ -431,7 +432,7 @@ nav input[type="text"]:focus {
   color: #f8f8f8;
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 10px; /* Adjust as needed */
+  margin-bottom: 20px; /* Adjust as needed */
 }
 
 .number-with-k {
@@ -440,6 +441,7 @@ nav input[type="text"]:focus {
   font-size: 38px;
   font-weight: bold;
   color: #f3f3f3;
+  
 }
 
 .number-with-k span {
@@ -458,7 +460,7 @@ nav input[type="text"]:focus {
 }
 
 .marginbottom{
-margin-bottom: 110px;
+margin-bottom: 60px;
 }
 
 .ani-stats-title h1 {
@@ -485,4 +487,90 @@ margin-bottom: 110px;
 
   .animated-number {
     font-size: 32px;
-  }}
+  }
+  
+}
+
+
+/* ==================================== */
+/* Container for the FAQ section */
+/* ==================================== */
+
+
+.faq-section {
+  margin: 2rem auto;
+  max-width: 1280px; /* Adjust width as needed */
+  text-align: center;
+}
+
+/* Title style */
+.faq-title {
+  text-align: center;
+  margin-bottom: 20px; /* Adjust margin as needed */
+  font-size: 72px; /* Adjust font size as desired */
+  color: #ffffff; /* Adjust title color */
+  background-image: linear-gradient(135deg, #61dbff, #8f2dfd); /* Apply linear gradient as background */
+  -webkit-background-clip: text; /* Clip text to background */
+  background-clip: text; /* Clip text to background */
+  -webkit-text-fill-color: transparent; /* Hide text fill */
+  margin-bottom: 60px;
+}
+
+/* Individual FAQ item style */
+.faq-item {
+  margin-bottom: 1rem;
+  border: 2px solid #ddd; /* Add border */
+  border-radius: 5px; /* Add border radius */
+  padding: 1rem; /* Add padding */
+  opacity: 0; /* Initially hide the FAQ items */
+  transition: opacity 0.5s ease, transform 1s ease; /* Add transition for opacity and transform */
+}
+
+/* Hover effect for FAQ item */
+.faq-item:hover {
+  border: 2px solid transparent; /* Ensure the initial border is transparent */
+  border-image: linear-gradient(135deg, #61dbff, #8f2dfd); /* Apply linear gradient as border image */
+  border-image-slice: 1; /* Ensure entire border is covered by the gradient */
+}
+
+/* Question button style */
+.faq-question {
+  background: none;
+  border: none;
+  color: #ffffff; /* Adjust question color */
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-align: left;
+  width: 100%; /* Full width for vertical line */
+  font-size: 1.5rem; /* Adjust font size as desired */
+}
+
+/* Active question style */
+.faq-question.active {
+  font-weight: bold;
+}
+
+/* Answer style */
+.faq-answer {
+  padding: 1rem;
+  font-size: 1.2rem; /* Adjust font size as desired */
+  text-align: left;
+  color: #ffffff; /* Adjust answer color */
+}
+
+/* Animation keyframes for sliding up */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px); /* Start slightly below and fade in */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply slide-up animation to FAQ items when visible */
+.faq-item.animate {
+  animation: slideUp 1s ease forwards;
+}

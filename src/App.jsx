@@ -5,6 +5,7 @@ import Mid from './components/mid';
 import Ourvision from './components/ourvision';
 import FeatureCards from './components/FeatureCards';
 import AniStats from './components/ani_stat';
+import Faq from './components/Faq'; // Assuming Faq.jsx is in the same directory
 
 const App = () => {
   return (
@@ -13,8 +14,8 @@ const App = () => {
       <Mid />
       <Ourvision />
       <FeatureCards />
-      
-      <AniStats/>
+      <AniStats />
+      <Faq />  // Add the Faq component here
     </div>
   );
 };

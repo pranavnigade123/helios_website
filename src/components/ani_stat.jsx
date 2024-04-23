@@ -1,25 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import AnimatedNumber from './animatednum';
 
 const AniStats = () => {
-  const statsRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const { top, bottom } = statsRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      // Calculate when the element is 50% visible on the screen
-      const isVisible = top < windowHeight * 0.5 && bottom >= windowHeight * 0.5;
-      statsRef.current.classList.toggle('animate-slide-up', isVisible);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <div ref={statsRef} className="container anistat_container whitebg">
+    <div className="container anistat_container whitebg animate-slide-up">
       <div className="ani-stats-title">
         <h1>Join a community of millions.</h1>
       </div>
@@ -44,7 +28,7 @@ const AniStats = () => {
           <span>K</span>
         </div>
       </div>
-      <div className='marginbottom'></div>
+      <div className="marginbottom"></div>
     </div>
   );
 };
